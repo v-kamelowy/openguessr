@@ -168,7 +168,7 @@ function initMap() {
         outlineColor: '#ffffff',
         outlineWeight: 2,
         */
-        url: "img/jettka.png",
+        url: "./img/jettka.png",
         scaledSize: new google.maps.Size(32, 32),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(16, 16),
@@ -192,7 +192,7 @@ function initMap() {
         outlineColor: '#ff4242',
         outlineWeight: 2,
         */
-        url: "img/open_pin.png",
+        url: "./img/open_pin.png",
         scaledSize: new google.maps.Size(32, 32),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(16, 24),
@@ -210,7 +210,7 @@ function initMap() {
 
     google.maps.event.addListener(goalMarker, 'mouseover', function() {
         goalMarker.setIcon({
-            url: "img/open_pin.png",
+            url: "./img/open_pin.png",
             scaledSize: new google.maps.Size(36, 36),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(18, 27),
@@ -219,7 +219,7 @@ function initMap() {
 
     google.maps.event.addListener(goalMarker, 'mouseout', function() {
         goalMarker.setIcon({
-            url: "img/open_pin.png",
+            url: "./img/open_pin.png",
             scaledSize: new google.maps.Size(32, 32),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(16, 24),
