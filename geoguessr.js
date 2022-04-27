@@ -56,25 +56,27 @@ function initMap() {
     var selectedMap = sessionStorage.getItem("selectedMap");
     console.log(selectedMap);
 
-    if (selectedMap == "pl") {
-        window.x = 49.2 + Math.random() * 4.8;
-        window.y = 14.2 + Math.random() * 9.8;
-    } else if (selectedMap == "tr") {
-        let tr_r = Math.round(Math.random());
-        if (tr_r == 0){
-            //Gdynia
-            window.x = 54.479 + Math.random() * 0.068;
-            window.y = 18.525 + Math.random() * 0.024;
-        } else if (tr_r == 1){
-            //Gdańsk
-            window.x = 54.346 + Math.random() * 0.133;
-            window.y = 18.606 + Math.random() * 0.049;
+    if (selectedMap != null && selectedMap != undefined) {
+        if (selectedMap == "pl") {
+            window.x = 49.2 + Math.random() * 4.8;
+            window.y = 14.2 + Math.random() * 9.8;
+        } else if (selectedMap == "tr") {
+            let tr_r = Math.round(Math.random());
+            if (tr_r == 0){
+                //Gdynia
+                window.x = 54.479 + Math.random() * 0.068;
+                window.y = 18.525 + Math.random() * 0.024;
+            } else if (tr_r == 1){
+                //Gdańsk
+                window.x = 54.346 + Math.random() * 0.133;
+                window.y = 18.606 + Math.random() * 0.049;
+            }
+        } else if (selectedMap == "cz") {
+            window.x = 50.8 + Math.random() * 0.023;
+            window.y = 19.098 + Math.random() * 0.039;
         }
-    } else if (selectedMap == "cz") {
-        window.x = 50.8 + Math.random() * 0.023;
-        window.y = 19.098 + Math.random() * 0.039;
-    } else if (selectedMap == "null" || selectedMap == "undefined" {
-        location.href = "https://v-kamelowy.github.io/openguessr/";
+    } else {
+        location.href = "index.html";
     }
 
     function getStreetView(position) {
