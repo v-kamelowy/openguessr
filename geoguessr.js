@@ -73,6 +73,8 @@ function initMap() {
     } else if (selectedMap == "cz") {
         window.x = 50.8 + Math.random() * 0.023;
         window.y = 19.098 + Math.random() * 0.039;
+    } else if (selectedMap == "null" || selectedMap == "undefined" {
+        location.href = "https://v-kamelowy.github.io/openguessr/";
     }
 
     function getStreetView(position) {
